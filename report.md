@@ -1,6 +1,6 @@
 # 期末報告 — AIASE 2026 Final Project
 
-> 學生：Jule / GitHub: `Jullliaaaa`
+> 學生：蕭妙宣 / GitHub: `Jullliaaaa`
 
 ---
 
