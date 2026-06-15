@@ -1,0 +1,12 @@
+{
+  "task_id": "ragfilter_s04",
+  "essential": [
+    "d1",
+    "d2"
+  ],
+  "noise": [
+    "d3",
+    "d4",
+    "d5"
+  ]
+}

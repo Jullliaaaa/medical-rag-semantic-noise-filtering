@@ -30,11 +30,11 @@ python -m pip install -r requirements.txt
 
 > 若 (c) 失敗、提示 "Updates were rejected because the remote contains work that you do not have locally",代表你的 classroom repo 不是完全空的(可能 GitHub 預設帶了一個 README 之類)。聯繫 TA 確認後再決定要 `git pull --rebase origin main` 合併、或重新初始化。
 
-### 2. 把所有 `<github_id>` / `GITHUBID` 改成你的 GitHub ID
+### 2. 把所有 `<github_id>` / `Jullliaaaa` 改成你的 GitHub ID
 
 `<github_id>` 以 GitHub Classroom roster mapping 為準。需要改的地方:
 
-- `skills/text2sql-GITHUBID/`、`skills/code-author-GITHUBID/`、`skills/bug-hunter-GITHUBID/` 這三個骨架資料夾的名字
+- `skills/text2sql-Jullliaaaa/`、`skills/code-author-Jullliaaaa/`、`skills/bug-hunter-Jullliaaaa/` 這三個骨架資料夾的名字
 - 每個 `SKILL.md` 的 frontmatter `name:` 欄位
 - `PAIRWISE_ROLE.md` 內的 `skill_path:`
 - Open Track 沒有骨架,請依 `OPEN_TRACK.md` 模板**自行建立** `skills/open-<short-name>-<github_id>/`(`<short-name>` 自取);完成後在 `OPEN_TRACK.md` 的「## 2. Skill 名稱與目錄」填入該路徑。
@@ -43,14 +43,14 @@ python -m pip install -r requirements.txt
 
 ```bash
 GH=<your_github_id>
-find skills -depth -type d -name '*GITHUBID*' | while read d; do
-  mv "$d" "${d/GITHUBID/$GH}"
+find skills -depth -type d -name '*Jullliaaaa*' | while read d; do
+  mv "$d" "${d/Jullliaaaa/$GH}"
 done
-grep -rl 'GITHUBID' . | xargs sed -i '' "s/GITHUBID/$GH/g"   # macOS
-# grep -rl 'GITHUBID' . | xargs sed -i    "s/GITHUBID/$GH/g"  # Linux
+grep -rl 'Jullliaaaa' . | xargs sed -i '' "s/Jullliaaaa/$GH/g"   # macOS
+# grep -rl 'Jullliaaaa' . | xargs sed -i    "s/Jullliaaaa/$GH/g"  # Linux
 ```
 
-> 改完請以 `grep -r GITHUBID .` 確認沒有殘留。
+> 改完請以 `grep -r Jullliaaaa .` 確認沒有殘留。
 
 ### 3. 安裝 Hermes Agent 並把 model provider 指向課程 LiteLLM Gateway
 
@@ -107,9 +107,9 @@ python run_dev.py --skill bug-hunter-<github_id>  --track pairwise --role bug-hu
 │   └── hermes-env.example
 ├── skills/                                ← 你的 skill 與 reference 對手
 │   ├── hello-aiase/                       ← 煙霧測試,勿改
-│   ├── text2sql-GITHUBID/                 ← Basic Track 骨架,改名後填邏輯
-│   ├── code-author-GITHUBID/              ← Pairwise Code Author 骨架
-│   ├── bug-hunter-GITHUBID/               ← Pairwise Bug Hunter 骨架
+│   ├── text2sql-Jullliaaaa/                 ← Basic Track 骨架,改名後填邏輯
+│   ├── code-author-Jullliaaaa/              ← Pairwise Code Author 骨架
+│   ├── bug-hunter-Jullliaaaa/               ← Pairwise Bug Hunter 骨架
 │   ├── (Open Track 自建:open-<short-name>-<github_id>/,參考 OPEN_TRACK.md)
 │   ├── reference-bug-hunter-conservative/ ← 課程提供,本機自測 Pairwise 對手
 │   ├── reference-bug-hunter-aggressive/
