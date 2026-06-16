@@ -79,6 +79,9 @@
 
 評分器從輸出 JSON 的 `kept` 陣列自動計算，無需人工判斷。
 
+**評分器執行方式：**
+評分器以 `hermes chat --toolsets skills,terminal --yolo -q '/open-ragfilter-Jullliaaaa {task_json}'` 執行 skill，擷取結果檔後以 `scripts/evaluate.py --result <result> --ground-truth ground_truth/gt_ragfilter_s<N>.json` 計算 F1。
+
 **為何不可 gameable:**
 
 - **Ground truth 對 skill 不可見**: 文件的 `label` 與 `ground_truth` 欄位只存在於評分環境的標註檔，不會傳入 skill 的輸入 JSON。skill 看不到答案。

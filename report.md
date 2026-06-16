@@ -46,7 +46,7 @@ SKILL.md 特別強調「task_description 裡說要支援的功能，但 code 沒
 
 **harness 設計（scripts/run.py + evaluate.py）：**
 
-`run.py` 在寫結果前驗證 `kept ∪ removed == 所有輸入 id`（不多不少、不重疊），確保 LLM 不會漏掉文件或重複標記。`evaluate.py` 計算 Precision/Recall/F1，用 F1 ≥ 0.5 作為 PASS 門檻，避免 LLM 靠「全保留」或「全剔除」矇分。
+`run.py` 在寫結果前驗證 `kept` 與 `removed` 無重疊；完整性（`kept ∪ removed == 所有輸入 id`）由 SKILL.md 在 Pitfalls 明確要求 LLM 不遺漏文件，並由 `evaluate.py` 在評分時驗證。`evaluate.py` 計算 Precision/Recall/F1，用 F1 ≥ 0.5 作為 PASS 門檻，避免 LLM 靠「全保留」或「全剔除」矇分。
 
 ---
 
