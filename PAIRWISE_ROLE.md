@@ -1,6 +1,3 @@
-role: code-author
-skill_path: skills/code-author-Jullliaaaa/
-
 roles:
   - role: code-author
     skill_path: skills/code-author-Jullliaaaa/
